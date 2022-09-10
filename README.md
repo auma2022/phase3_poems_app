@@ -1,82 +1,151 @@
-# Getting Started with Create React App
 
-This project was created for phase 3 at Flatiron school. This was built using React, JavaScript, Ruby, Sinatra, HTML, and CSS. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Short Poem Books
 
-The goal of this project was to incorporate previous React knowledge for a front end app, with new skills to create a backend server. 
+This is an application for short poem books. Where poem lovers will come sign in and view some poem books and recomend them for others to read through reveiwing and leaving their comments. They also help the app users know which books are not intesting so they don't waste time and money buying the books.
+## Acknowledgements
 
-With this app the user will come to a landing page with a description about what the app does. This app is used to track books. A user can add a book, like the book, and add a review. The user can click on the "Books" button which will navigate them to a page showing the list of rendered books. Each book is rendered in a div showing the author, title, a like button with the number of likes, a button to choose whether to show or hide the book's reviews, an input field where reviews can be added with a submit button. The list of reviews then also has a button and the user can click this to delete a review. 
+ - [Allpoetry App](https://allpoetry.com/)
+ - [Tumblr](http://tumblr.com/)
+ - [My github repo](https://github.com/auma2022/phase3_poems_app)
 
-At the top of the books list page there is also a feature where the user can type in a book title and the list of books will be filtered to find the book the user is looking for. 
-  
-The next navigation button is "Add New Books". If clicked the user will transfer to a page where they can add a new book with a title and author. When the submit button is clicked, they are redirected back to the page of rendered books, with the new book added. 
 
-There are two images in the app, both are from [Link](https://unsplash.com/). 
-  
-Right now in order to run the application, npm start must be run from the "my-app-frontend" directory for the front end. To start the backend, bundle exec rake server must be run from the backend directory. 
+## API Reference
 
-## Available Scripts
+#### Get all items
 
-In the project directory, you can run:
+```http
+  GET /api/items
+```
 
-### `npm start`
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `api_key` | `string` | **Required**. Your API key |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Get item
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```http
+  GET /api/items/${id}
+```
 
-### `npm test`
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to fetch |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### add(num1, num2)
 
-### `npm run build`
+Takes two numbers and returns the sum.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Authors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [@dianaauma2](https://github.com/auma2022/phase3_poems_app)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Badges
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Add badges from somewhere like: [shields.io](https://shields.io/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
+[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Color Reference
 
-## Learn More
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
+| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
+| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
+| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Contributions are always welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+See `contributing.md` for ways to get started.
 
-### Analyzing the Bundle Size
+Please adhere to this project's `code of conduct`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## Demo
+https://drive.google.com/file/d/1Zf7jtuthExqk5Aoq6haaNXtcfH-z6i9F/view
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To deploy this project run
 
-### Deployment
+```bash
+  npm run deploy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  The app is not yet deployed but i will be sharing the link once it is deployed thanks
+```
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Documentation
+
+[Documentation](https://linktodocumentation)
+ This app was not documented
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`API_KEY`
+
+`ANOTHER_API_KEY`
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Used By
+
+This project is used by the following companies:
+
+- poem lovers
+- those intrested in poems
+
+
+## Support
+
+For support, email dianaauma2@gmail.com or join our Slack channel.
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/auma2022/phase3_poems_app.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Related
+
+Here are some related projects
+
+[Hello Poetry](http://hellopoetry.com/)
+
