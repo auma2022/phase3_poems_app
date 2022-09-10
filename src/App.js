@@ -5,6 +5,7 @@ import Books from "./Books";
 import FormPage from "./FormPage";
 import { Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Signin from "./Signin";
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -82,7 +83,11 @@ function App() {
       <Route path="/formpage">
         <FormPage addBooks={addBooks} />
       </Route>
-      <Route exact path="/">
+       <Route path="/">
+        <Signin/>
+      </Route>
+
+      <Route exact path="/home">
         <Home />
       </Route>
     </div>
