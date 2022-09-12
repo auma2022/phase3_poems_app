@@ -12,7 +12,7 @@ function App() {
   const [reviews, setReviews] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   useEffect(() => {
-    fetch(`http://localhost:9292/books`)
+    fetch(`https://poem-books.herokuapp.com/books`)
       .then((response) => response.json())
       .then((data) => {
         setBooks(data);
@@ -83,11 +83,11 @@ function App() {
       <Route path="/formpage">
         <FormPage addBooks={addBooks} />
       </Route>
-       <Route path="/">
+       <Route path="/signin">
         <Signin/>
       </Route>
 
-      <Route exact path="/home">
+      <Route exact path="/">
         <Home />
       </Route>
     </div>

@@ -21,7 +21,7 @@ const FormPage = ({ addBooks }) => {
       likes: 0,
     };
 
-    fetch(`http://localhost:9292/books`, {
+    fetch(`https://poem-books.herokuapp.com/books`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
